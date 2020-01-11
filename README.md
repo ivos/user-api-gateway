@@ -34,7 +34,6 @@ and merges the posts into the user data.
 - return standard error response body on not found
 - handle io.netty.handler.timeout.TimeoutException as 504
 - timeout tests?
-- load test?
 
 
 ## Commands
@@ -62,3 +61,17 @@ While the app is running, you can execute individual Integration tests.
 To execute all Integration tests:
 
     mvnw -Pit
+
+### Run load tests
+
+Start the application, then execute:
+
+    mvnw gatling:test
+
+
+## Load tests results
+
+Single host, dev ntb.
+
+- 500 concurrent users, 400 rps:
+    - [results index.html](load-tests-results/loadtest-500users/index.html)

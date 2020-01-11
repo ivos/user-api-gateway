@@ -55,6 +55,12 @@
 			<artifactId>json-path</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>io.gatling.highcharts</groupId>
+			<artifactId>gatling-charts-highcharts</artifactId>
+			<version>3.3.1</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 
@@ -78,6 +84,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>io.gatling</groupId>
+				<artifactId>gatling-maven-plugin</artifactId>
+				<version>3.0.5</version>
+				<configuration>
+					<simulationClass>load.LoadTest</simulationClass>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
