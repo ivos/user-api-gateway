@@ -16,6 +16,6 @@ public class GetUserIT {
 				.then()
 				.statusCode(HttpStatus.SC_OK)
 				.contentType(ContentType.JSON)
-				.body(equalTo(FileUtils.load(this, "ok-response.json")));
+				.body(equalTo(FileUtils.loadAsJson(this, "ok-response.json")));
 	}
 }

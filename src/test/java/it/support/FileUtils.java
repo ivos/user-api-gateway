@@ -9,6 +9,10 @@ import java.nio.charset.StandardCharsets;
 
 public class FileUtils {
 
+	public static String loadAsJson(Object testInstance, String fileName) {
+		return JsonFormatter.format(load(testInstance, fileName));
+	}
+
 	public static String load(Object testInstance, String fileName) {
 		try {
 			InputStream is = inputStream(testInstance, fileName);

@@ -1,1 +1,47 @@
-{"name":"Clementine Bauch","username":"Samantha","email":"Nathan@yesenia.net"}
+{
+  "name": "Clementine Bauch",
+  "username": "Samantha",
+  "email": "Nathan@yesenia.net",
+  "posts": [
+    {
+      "id": 21,
+      "title": "asperiores ea ipsam voluptatibus modi minima quia sint"
+    },
+    {
+      "id": 22,
+      "title": "dolor sint quo a velit explicabo quia nam"
+    },
+    {
+      "id": 23,
+      "title": "maxime id vitae nihil numquam"
+    },
+    {
+      "id": 24,
+      "title": "autem hic labore sunt dolores incidunt"
+    },
+    {
+      "id": 25,
+      "title": "rem alias distinctio quo quis"
+    },
+    {
+      "id": 26,
+      "title": "est et quae odit qui non"
+    },
+    {
+      "id": 27,
+      "title": "quasi id et eos tenetur aut quo autem"
+    },
+    {
+      "id": 28,
+      "title": "delectus ullam et corporis nulla voluptas sequi"
+    },
+    {
+      "id": 29,
+      "title": "iusto eius quod necessitatibus culpa ea"
+    },
+    {
+      "id": 30,
+      "title": "a quo magni similique perferendis"
+    }
+  ]
+}

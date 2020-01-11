@@ -21,7 +21,7 @@ public class UserController {
 	}
 
 	@GetMapping("/{id}")
-	public Mono<UserDto> getUserWithPosts(@PathVariable Long id) {
+	public Mono<UserPostsDto> getUserWithPosts(@PathVariable Long id) {
 		log.info("Get user with posts, id: {}", id);
 		return userService.getUserWithPosts(id);
 	}
