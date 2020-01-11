@@ -1,0 +1,15 @@
+<configuration scan="true">
+	<include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+	<root level="info">
+		<appender-ref ref="CONSOLE"/>
+		<appender-ref ref="FILE"/>
+	</root>
+
+	<logger name="com.github.ivos.gateway" level="debug"/>
+
+	<logger name="reactor.netty.resources" level="debug"/>
+	<logger name="reactor.netty.http.server" level="debug"/>
+	<logger name="reactor.netty.http.client" level="debug"/>
+
+</configuration>
