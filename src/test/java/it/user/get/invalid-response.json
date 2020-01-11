@@ -1,0 +1,8 @@
+{
+  "timestamp": "REPLACED",
+  "path": "/users/invalid",
+  "status": 400,
+  "error": "Bad Request",
+  "message": "Type mismatch.",
+  "requestId": "REPLACED"
+}

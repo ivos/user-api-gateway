@@ -1,6 +1,7 @@
 package it.support;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 public class JsonFormatter {
 
@@ -8,6 +9,7 @@ public class JsonFormatter {
 
 	static {
 		objectMapper = new ObjectMapper();
+		objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
 	}
 
 	/**

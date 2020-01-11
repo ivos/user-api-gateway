@@ -22,6 +22,7 @@ Homework project demonstrating API gateway.
 
 - timeouts
 - generalize exception processing
+- return standard error response body on not found
 - load test?
 
 

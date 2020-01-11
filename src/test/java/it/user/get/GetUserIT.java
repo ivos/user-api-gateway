@@ -6,7 +6,7 @@ import it.support.FileUtils;
 import org.apache.http.HttpStatus;
 import org.junit.Test;
 
-import static org.hamcrest.Matchers.equalTo;
+import static it.support.Matchers.jsonEqualTo;
 
 public class GetUserIT {
 
@@ -16,7 +16,7 @@ public class GetUserIT {
 				.then()
 				.statusCode(HttpStatus.SC_OK)
 				.contentType(ContentType.JSON)
-				.body(equalTo(FileUtils.loadAsJson(this, "ok-response.json")));
+				.body(jsonEqualTo(FileUtils.loadAsJson(this, "ok-response.json")));
 	}
 
 	@Test
@@ -24,6 +24,18 @@ public class GetUserIT {
 		RestAssured.get("/users/666")
 				.then()
 				.statusCode(HttpStatus.SC_NOT_FOUND)
-				.body(equalTo(""));
+				.body(jsonEqualTo(""));
+	}
+
+	@Test
+	public void invalidId() {
+		String response = FileUtils.loadAsJson(this, "invalid-response.json");
+		RestAssured.get("/users/invalid")
+				.then()
+				.statusCode(HttpStatus.SC_BAD_REQUEST)
+				.contentType(ContentType.JSON)
+				.body(jsonEqualTo(response, ctx -> ctx
+						.set("$.timestamp", "REPLACED")
+						.set("$.requestId", "REPLACED")));
 	}
 }
