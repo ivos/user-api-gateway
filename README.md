@@ -2,6 +2,10 @@
 
 Homework project demonstrating API gateway.
 
+Gets user with their posts.
+Gets user and their posts separately from the target API
+and merges the posts into the user data.
+
 
 ## Prerequisites
 
@@ -13,6 +17,15 @@ Homework project demonstrating API gateway.
 - Java 8
 - Spring Boot
 - Spring Webflux + annotated controllers
+
+
+## Design
+
+- Layers:
+    - Controllers: REST interface
+    - Services: business logic (the library code to be called)
+    - Clients: wrap external API calls
+- Organize code by business entity (packages, layer components)
 
 
 ## ToDo
