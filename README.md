@@ -21,6 +21,7 @@ Homework project demonstrating API gateway.
 ## ToDo
 
 - timeouts
+- generalize exception processing
 - load test?
 
 

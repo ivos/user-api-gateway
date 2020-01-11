@@ -11,11 +11,19 @@ import static org.hamcrest.Matchers.equalTo;
 public class GetUserIT {
 
 	@Test
-	public void name() {
+	public void ok() {
 		RestAssured.get("/users/3")
 				.then()
 				.statusCode(HttpStatus.SC_OK)
 				.contentType(ContentType.JSON)
 				.body(equalTo(FileUtils.loadAsJson(this, "ok-response.json")));
+	}
+
+	@Test
+	public void notFound() {
+		RestAssured.get("/users/666")
+				.then()
+				.statusCode(HttpStatus.SC_NOT_FOUND)
+				.body(equalTo(""));
 	}
 }
