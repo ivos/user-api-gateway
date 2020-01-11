@@ -15,14 +15,12 @@ Homework project demonstrating API gateway.
 - Spring Webflux + annotated controllers
 
 
-## Design decisions
-
-
 ## ToDo
 
-- timeouts
 - generalize exception processing
 - return standard error response body on not found
+- handle io.netty.handler.timeout.TimeoutException as 504
+- timeout tests?
 - load test?
 
 
